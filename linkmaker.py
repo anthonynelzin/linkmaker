@@ -57,7 +57,7 @@ else:
 ###############################
 LinkParsed = urlparse(Link)
 LinkCleaned = LinkParsed.scheme + "://" + LinkParsed.netloc + LinkParsed.path
-LinkDomain = "{uri.hostname}".format(uri=LinkParsed)
+LinkDomain = LinkParsed.netloc
 # print(LinkDomain)
 
 ######################
