@@ -16,7 +16,6 @@ MyBrowser = ""
 # Paramétrer les identifiants d'affiliation #
 #############################################
 AmazonAffiliateID = "mac01-21"
-AppleAffiliateID = ""
 AppleAffiliateFRID = "ii3G"
 AppleAffiliateBEID = "ijhc"
 AppleAffiliateCHID = "ijhb"
