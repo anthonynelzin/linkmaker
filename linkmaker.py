@@ -77,14 +77,17 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 				("appleinsider.com", "*AppleInsider*"),
 				("www.appleworld.today", "*Apple World Today*"),
 				("arstechnica.com", "*Ars Technica*"),
+				("www.audiostream.com", "*AudioStream*"),
 				# B
 				("www.beatsbydre.com", "Beats"),
 				("birchtree.me", "*Birchtree*"),
+				("blog.mozilla.org", "le blog de la fondation Mozilla"),
 				("www.bloomberg.com", "Bloomberg"),
 				("brooksreview.net", "*The Brooks Review*"),
 				("www.boulanger.com", "Boulanger"),
 				# C
 				("cahier.hypotheses.org", "*Consortium Cahier*"),
+				("www.club-innovation-culture.fr", "*CLIC France*"),
 				("www.cnil.fr", "le site de la CNIL"),
 				("coulmont.com", "le blog de Baptiste Coulmont"),
 				("craigmod.com", "Craig Mod"),
@@ -94,6 +97,7 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 				("www.darty.com", "Darty"),
 				("www.digitalaudioreview.net", "*DARKO*"),
 				("www.digitalstudies.org", "*Digital Studies/Le champ numérique*"),
+				("www.digitimes.com", "*Digitimes*"),
 				("www.dpreview.com", "*DPReview*"),
 				# E
 				("ebookfriendly.com", "*EBook Friendly*"),
@@ -103,6 +107,7 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 				("www.facebook.com", "Facebook"),
 				("www.fnac.com", "Fnac"),
 				("framablog.org", "*Framablog*"),
+				("www.francetvinfo.fr", "*Franceinfo*"),
 				("frankchimero.com", "Frank Chimero"),
 				("freakonometrics.hypotheses.org", "*Freakonometrics*"),
 				("www.ft.com", "*Financial Times*"),
@@ -140,6 +145,7 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 				("marco.org", "le blog de Marco Arment"),
 				("www.marketwatch.com", "MarketWatch"),
 				("medium.com", "*Medium*"),
+				("www.meta-media.fr", "*Méta-Media*"), 
 				("metrozendodo.fr", "*métro[zen]dodo*"),
 				("clio.metrozendodo.fr", "*métro[zen]dodo*"),
 				("memo.metrozendodo.fr", "*métro[mémo]dodo*"),
@@ -180,6 +186,7 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 				("www.twitter.com", "Twitter"),
 				# U
 				("www.underconsideration.com/", "*Brand New*"),
+				("usesthis.com", "*Uses This*"),
 				# W
 				("www.watchgeneration.fr", "*WatchGeneration*"),
 				("www.wellappointeddesk.com", "*The Well-Appointed Desk*"),
