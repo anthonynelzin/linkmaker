@@ -3,8 +3,6 @@
 import re
 from subprocess import Popen, PIPE
 from urlparse import urlparse
-# from genericlink import *
-# from affiliatelink import *
 
 ############################
 # Paramétrer le navigateur #
@@ -63,7 +61,7 @@ LinkDomain = LinkParsed.netloc
 ######################
 # Construire un lien #
 ######################
-def GenericLink(Link, LinkTitle, LinkDomain):
+def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 	LinkName = LinkDomain
 	LinkArray = [
 				("www.20minutes.fr", "*20 Minutes*"),
@@ -201,10 +199,12 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 	for LinkArrayDomain,LinkArrayName in LinkArray:
 		if LinkArrayDomain == LinkDomain:
 			LinkName = LinkArrayName
+	
 	MarkdownLink = "[" + LinkName + "](" + Link + " '" + LinkTitle + "'" + ")"
 	print (MarkdownLink)
-	# Si lien affilié, vérifier qu'il fonctionne bien.
-	# Popen(['open', Link])
+	
+	if LinkType == "affiliate":
+		Popen(['open', Link])
 
 #######################################
 # Définir les fonctions de traitement #
@@ -215,9 +215,9 @@ def GenericLink(Link, LinkTitle, LinkDomain):
 def AmazonLink(Link, LinkTitle, LinkDomain):
 	search = re.search(r'(dp|gp)(\/product)?\/(\S{10})\/', Link)
 	if search:
-		GenericLink("https://www.amazon.fr/dp/" + search.group(3) + "/?tag=" + AmazonAffiliateID, LinkTitle, LinkDomain)
+		MakeLink("https://www.amazon.fr/dp/" + search.group(3) + "/?tag=" + AmazonAffiliateID, LinkTitle, LinkDomain)
 	else:
-		GenericLink(Link, LinkTitle, LinkDomain)
+		MakeLink(Link, LinkTitle, LinkDomain, "affiliate")
 		
 # Lien AppleLink
 def AppleLink(Link, LinkTitle, LinkDomain):
@@ -229,9 +229,9 @@ def AppleLink(Link, LinkTitle, LinkDomain):
 			AppleAffiliateID = AppleAffiliateCHID
 		else:
 			AppleAffiliateID = AppleAffiliateFRID
-		GenericLink("http://aos.prf.hn/click/camref:" + AppleAffiliateID + "/destination:" + Link, LinkTitle, LinkDomain)
+		MakeLink("http://aos.prf.hn/click/camref:" + AppleAffiliateID + "/destination:" + Link, LinkTitle, LinkDomain, "affiliate")
 	else:
-		GenericLink(Link, LinkTitle, LinkDomain)
+		MakeLink(Link, LinkTitle, LinkDomain, "affiliate")
 
 # Lien iTunes
 # Le paramètre mt n'est pas obligatoire, mais souvent présent
@@ -239,11 +239,11 @@ def AppleLink(Link, LinkTitle, LinkDomain):
 def iTunesLink(Link, LinkTitle, LinkDomain):
 	search = re.search(r'https://itunes.apple.com/fr/(app|album|artist|audiobook|book|collection|movie|podcast|tv-season)/\S*(id\d+)(\?mt=\d+)?', Link)
 	if search.group(3): # Si ?mt=
-		GenericLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + search.group(3) + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain)
+		MakeLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + search.group(3) + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain)
 	elif search.group(2):
-		GenericLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain)
+		MakeLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain)
 	else:
-		GenericLink(Link, LinkTitle, LinkDomain)
+		MakeLink(Link, LinkTitle, LinkDomain, "affiliate")
 		
 ##########################################
 # Traiter le lien en fonction du domaine #
@@ -255,4 +255,4 @@ elif LinkDomain == "www.apple.com":
 elif LinkDomain == "itunes.apple.com":
 	iTunesLink(LinkCleaned, LinkTitle, LinkDomain)
 else:
-	GenericLink(LinkCleaned, LinkTitle, LinkDomain)	
+	MakeLink(LinkCleaned, LinkTitle, LinkDomain, "normal")	
