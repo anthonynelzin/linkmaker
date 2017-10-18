@@ -8,7 +8,7 @@ from urlparse import urlparse
 # Paramétrer le navigateur #
 ############################
 # chrome/firefox
-MyBrowser = ""
+MyBrowser = "firefox"
 
 #############################################
 # Paramétrer les identifiants d'affiliation #
@@ -219,6 +219,8 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 	for LinkArrayDomain,LinkArrayName in LinkArray:
 		if LinkArrayDomain == LinkDomain:
 			LinkName = LinkArrayName
+		if MyBrowser == "firefox":
+			LinkTitle = LinkName.strip("*")
 	
 	MarkdownLink = "[" + LinkName + "](" + Link + " '" + LinkTitle + "'" + ")"
 	print (MarkdownLink)
