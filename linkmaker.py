@@ -8,7 +8,7 @@ from urlparse import urlparse
 # Paramétrer le navigateur #
 ############################
 # chrome/firefox
-MyBrowser = "firefox"
+MyBrowser = ""
 
 #############################################
 # Paramétrer les identifiants d'affiliation #
@@ -112,6 +112,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.facebook.com", "Facebook"),
 				("www.fastcompany.com", "*Fast Company*"),
 				("www.fnac.com", "Fnac"),
+				("www.fool.com", "*The Motley Fool*"),
 				("www.forbes.com", "*Forbes*"),
 				("framablog.org", "*Framablog*"),
 				("www.francetvinfo.fr", "*Franceinfo*"),
@@ -120,6 +121,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.ft.com", "*Financial Times*"),
 				# G
 				("github.com", "GitHub"),
+				("gizmodo.com", "*Gizmodo*"),
 				("www.goodreads.com", "Goodreads"),
 				# H
 				("www.headfonia.com", "*Headfonia*"),
@@ -165,6 +167,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("memo.metrozendodo.fr", "*métro[mémo]dodo*"),
 				("photo.metrozendodo.fr", "*métro[photo]dodo*"),
 				("stylo.metrozendodo.fr", "*métro[stylo]dodo*"),
+				("www.microsoft.com", "Microsoft"),
 				("mjtsai.com", "Michael Tsai"),
 				("mondaynote.com", "*Monday Note*"),
 				("www.monde-diplomatique.fr", "*Le Monde diplomatique*"),
@@ -178,6 +181,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.pcworld.com", "*PCWorld*"),
 				("www.ped30.com", "*Apple 3.0*"),
 				("www.penaddict.com", "*The Pen Addict"),
+				("petapixel.com", "*PetaPixel*"),
 				("www.popsci.com", "*Popular Science*"),
 				# Q
 				("www.qobuz.com", "Qobuz"),
@@ -203,12 +207,14 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.twitter.com", "Twitter"),
 				# U
 				("www.underconsideration.com/", "*Brand New*"),
+				("urbanbike.com", "*Urbanbike*"),
 				("usesthis.com", "*Uses This*"),
 				# W
 				("www.watchgeneration.fr", "*WatchGeneration*"),
 				("www.wellappointeddesk.com", "*The Well-Appointed Desk*"),
 				("en.wikipedia.org", "*Wikipedia*"),
 				("fr.wikipedia.org", "*Wikipédia*"),
+				("blogs.windows.com", "Windows"),
 				("www.wired.com", "*Wired*"),
 				("www.wsj.com", "*Wall Street Journal*"),
 				# Y
