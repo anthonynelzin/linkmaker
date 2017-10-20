@@ -184,7 +184,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("paulstamatiou.com", "Paul Stamatiou"),
 				("www.pcworld.com", "*PCWorld*"),
 				("www.ped30.com", "*Apple 3.0*"),
-				("www.penaddict.com", "*The Pen Addict"),
+				("www.penaddict.com", "*The Pen Addict*"),
 				("petapixel.com", "*PetaPixel*"),
 				("journals.plos.org", "PLOS"),
 				("www.popsci.com", "*Popular Science*"),
@@ -269,16 +269,22 @@ def AppleLink(Link, LinkTitle, LinkDomain):
 		MakeLink(Link, LinkTitle, LinkDomain, "affiliate")
 
 # Lien iTunes
-# Le paramètre mt n'est pas obligatoire, mais souvent présent
 # Utilisation de geo.itunes.apple.com pour gérer les différents pays
 def iTunesLink(Link, LinkTitle, LinkDomain):
-	search = re.search(r'https://itunes.apple.com/fr/(app|album|artist|audiobook|book|collection|movie|podcast|tv-season)/\S*(id\d+)(\?mt=\d+)?', Link)
-	if search.group(3): # Si ?mt=
-		MakeLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + search.group(3) + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain)
-	elif search.group(2):
-		MakeLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain)
-	else:
-		MakeLink(Link, LinkTitle, LinkDomain, "affiliate")
+	search = re.search(r'https://itunes.apple.com/fr/(app|album|artist|audiobook|author|book|collection|movie|podcast|tv-season)/(\S*)/(id\d+)', Link)
+	iTunesLinkMediaType = "1"
+	iTunesLinkTypeArray = [
+		("app", "8"),
+		("audiobook", "3"),
+		("book", "11"),
+		("movie", "6"),
+		("podcast", "2"),
+		("tv-season", "4"),
+	]
+	for iTunesLinkTypeArrayName,iTunesLinkTypeArrayNumber in iTunesLinkTypeArray:
+		if iTunesLinkTypeArrayName == search.group(1):
+			iTunesLinkMediaType = iTunesLinkTypeArrayNumber
+	MakeLink("https://geo.itunes.apple.com/fr/" + search.group(1) + "/" + search.group(2) + "/" + search.group(3) + "?mt=" + iTunesLinkMediaType + "&at=" + iTunesAffiliateID, LinkTitle, LinkDomain, "affiliate")
 		
 ##########################################
 # Traiter le lien en fonction du domaine #
