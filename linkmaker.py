@@ -71,6 +71,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				# A
 				("www.amazon.com", "Amazon"),
 				("www.amazon.fr", "Amazon"),
+				("www.anandtech.com", "*Anandtech*"),
 				("www.androidauthority.com", "*Android Authority*"),
 				("www.androidcentral.com", "*Android Central*"),
 				("anthony.nelzin.fr", "Anthony Nelzin-Santos"),
@@ -90,9 +91,11 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.bloomberg.com", "Bloomberg"),
 				("brooksreview.net", "*The Brooks Review*"),
 				("www.boulanger.com", "Boulanger"),
+				("www.businessinsider.com", "*Business Insider*"),
 				# C
 				("cahier.hypotheses.org", "*Consortium Cahier*"),
 				("www.club-innovation-culture.fr", "*CLIC France*"),
+				("www.cnbc.com", "*CNBC*"),
 				("www.cnil.fr", "CNIL"),
 				("coulmont.com", "Baptiste Coulmont"),
 				("craigmod.com", "Craig Mod"),
@@ -106,6 +109,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.dpreview.com", "*DPReview*"),
 				# E
 				("ebookfriendly.com", "*EBook Friendly*"),
+				("www.economist.com", "*The Economist*"),
 				("elpais.com", "*El País*"),
 				("www.engadget.com", "*Engadget*"),
 				# F
@@ -182,7 +186,9 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.ped30.com", "*Apple 3.0*"),
 				("www.penaddict.com", "*The Pen Addict"),
 				("petapixel.com", "*PetaPixel*"),
+				("journals.plos.org", "PLOS"),
 				("www.popsci.com", "*Popular Science*"),
+				("puri.sm", "Purism"),
 				# Q
 				("www.qobuz.com", "Qobuz"),
 				# R
@@ -206,6 +212,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("toucharcade.com", "*TouchArcade*"),
 				("www.twitter.com", "Twitter"),
 				# U
+				("www.ubuntu.com", "Ubuntu"),
 				("www.underconsideration.com/", "*Brand New*"),
 				("urbanbike.com", "*Urbanbike*"),
 				("usesthis.com", "*Uses This*"),
