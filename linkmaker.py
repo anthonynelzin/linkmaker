@@ -1,5 +1,13 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
+#########################
+#########################
+# Anthony Nelzin-Santos #
+# Licence CeCILL v2.1   #
+#########################
+#########################
+
 import re
 from subprocess import Popen, PIPE
 from urlparse import urlparse
