@@ -19,7 +19,6 @@ AppleAffiliateBEID = "ijhc"
 AppleAffiliateCHID = "ijhb"
 iTunesAffiliateID = "11lIzz"
 
-
 ###########################################################
 # Récupérer le lien depuis le navigateur avec AppleScript #
 ###########################################################
