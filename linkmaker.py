@@ -91,6 +91,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.audiostream.com", "*AudioStream*"),
 				# B
 				("www.beatsbydre.com", "Beats"),
+				("www.bbc.com", "*BBC*"),
 				("bgr.com", "*BGR*"),
 				("birchtree.me", "*Birchtree*"),
 				("www.blog.google", "Google"),
@@ -140,6 +141,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				# I
 				("www.igen.fr", "*iGeneration*"),
 				("www.ilounge.com", "*iLounge*"),
+				("www.independent.co.uk", "*The Independent*"),
 				("www.innerfidelity.com", "*InnerFidelity*"),
 				("ioccasion.fr", "iOccasion"),
 				("itunes.apple.com", "iTunes"),
@@ -160,6 +162,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				# M
 				("www.macg.co", "*MacGeneration*"),
 				("forums.macg.co", "les forums de MacGeneration"),
+				("http://www.mackungfu.org", "*Mac Kung Fu*"),
 				("www.macobserver.com", "*The Mac Observer*"),
 				("www.macrumors.com", "*MacRumors*"),
 				("www.macsales.com", "OWC"),
@@ -172,6 +175,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("marco.org", "Marco Arment"),
 				("www.marketwatch.com", "MarketWatch"),
 				("medium.com", "*Medium*"),
+				("www.mercurynews.com", "*The Mercury News*"),
 				("www.meta-media.fr", "*Méta-Media*"), 
 				("metrozendodo.fr", "*métro[zen]dodo*"),
 				("clio.metrozendodo.fr", "*métro[zen]dodo*"),
@@ -183,6 +187,8 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("mondaynote.com", "*Monday Note*"),
 				("www.monde-diplomatique.fr", "*Le Monde diplomatique*"),
 				# N
+				("www.nature.com", "*Nature*"),
+				("www.npr.org", "*NPR*"),
 				("www.nytimes.com", "*New York Times*"),
 				# O
 				("www.ouest-france.fr", "*Ouest-France*"),
@@ -194,6 +200,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.penaddict.com", "*The Pen Addict*"),
 				("petapixel.com", "*PetaPixel*"),
 				("journals.plos.org", "PLOS"),
+				("www.politico.com", "*Politico*"),
 				("www.popsci.com", "*Popular Science*"),
 				("puri.sm", "Purism"),
 				# Q
@@ -213,6 +220,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("stratechery.com", "*Stratechery*"),
 				# T
 				("www.techhive.com", "*TechHive*"),
+				("www.technologyreview.com", "*MIT Technology Review*"),
 				("thepelikansperch.com", "*The Pelikan Perch*"),
 				("www.theverge.com", "*The Verge*"),
 				("tidbits.com", "*TidBits*"),
