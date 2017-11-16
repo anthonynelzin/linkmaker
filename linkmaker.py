@@ -8,6 +8,7 @@
 #########################
 #########################
 
+from __future__ import print_function
 import re
 from subprocess import Popen, PIPE
 from urlparse import urlparse
@@ -253,7 +254,7 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 			LinkTitle = LinkName.strip("*")
 	
 	MarkdownLink = "[" + LinkName + "](" + Link + " '" + LinkTitle + "'" + ")"
-	print (MarkdownLink)
+	print (MarkdownLink, end='')
 	
 	if LinkType == "affiliate":
 		Popen(['open', Link])
