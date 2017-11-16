@@ -143,6 +143,8 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 				("www.ilounge.com", "*iLounge*"),
 				("www.independent.co.uk", "*The Independent*"),
 				("www.innerfidelity.com", "*InnerFidelity*"),
+				("www.intel.com", "Intel"),
+				("www.intel.fr", "Intel"),
 				("ioccasion.fr", "iOccasion"),
 				("itunes.apple.com", "iTunes"),
 				# K
