@@ -75,7 +75,7 @@ LinkDomain = LinkParsed.netloc
 # Construire un lien #
 ######################
 def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
-	MarkdownLink = "[]: (" + Link + " '" + LinkTitle + "'" + ")"
+	MarkdownLink = "[]: " + Link + " '" + LinkTitle + "'"
 	print (MarkdownLink, end='')
 	
 	if LinkType == "affiliate":
