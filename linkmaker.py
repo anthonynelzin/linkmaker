@@ -90,11 +90,11 @@ def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
 def AmazonLink(Link, LinkTitle, LinkDomain):
 	search = re.search(r'(dp|gp)(\/product)?\/(\S{10})\/', Link)
 	if search:
-		MakeLink("https://www.amazon.fr/dp/" + search.group(3) + "/?tag=" + AmazonAffiliateID, LinkTitle, LinkDomain)
+		MakeLink("https://www.amazon.fr/dp/" + search.group(3) + "/?tag=" + AmazonAffiliateID, LinkTitle, LinkDomain, "affiliate")
 	else:
-		MakeLink(Link, LinkTitle, LinkDomain, "affiliate")
+		MakeLink(Link, LinkTitle, LinkDomain, "normal")
 		
-# Lien AppleLink
+# Lien Apple
 def AppleLink(Link, LinkTitle, LinkDomain):
 	search = re.search(r'https://www.apple.com/(fr|be-fr|ch-fr|fr-edu|be-fr-edu|ch-fr-edu)/shop/?(\S)*', Link)
 	if search:
