@@ -13,11 +13,18 @@ import re
 from subprocess import Popen, PIPE
 from urlparse import urlparse
 
-############################
-# Paramétrer le navigateur #
-############################
-# safaridev/chrome/firefox
+##############################
+# Paramétrer les préférences #
+##############################
+# Si vide, Safari
+# safaridev pour Safari Technology Preview
+# chrome pour Google Chrome
+# firefox pour Mozilla Firefox
 MyBrowser = ""
+
+# Si vide, Markdown
+# HTML pour lien HTML
+MyLinks = ""
 
 #############################################
 # Paramétrer les identifiants d'affiliation #
@@ -75,8 +82,17 @@ LinkDomain = LinkParsed.netloc
 # Construire un lien #
 ######################
 def MakeLink(Link, LinkTitle, LinkDomain, LinkType):
-	MarkdownLink = "[]: " + Link + " '" + LinkTitle + "'"
-	print (MarkdownLink, end='')
+	if MyBrowser == "firefox":
+		MarkdownLink = "[]: " + Link + " '" + LinkDomain + "'"
+		HTMLLink = "<a href='" + Link + "' title='" + LinkDomain + "'></a>"
+	else:
+		MarkdownLink = "[]: " + Link + " '" + LinkTitle + "'"
+		HTMLLink = "<a href='" + Link + "' title='" + LinkTitle + "'></a>"
+	
+	if MyLinks == "HTML":
+		print (HTMLLink, end='')
+	else:
+		print (MarkdownLink, end='')
 	
 	if LinkType == "affiliate":
 		Popen(['open', Link])
