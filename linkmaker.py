@@ -16,7 +16,7 @@ from urlparse import urlparse
 ############################
 # Paramétrer le navigateur #
 ############################
-# chrome/firefox
+# safaridev/chrome/firefox
 MyBrowser = ""
 
 #############################################
@@ -32,6 +32,7 @@ iTunesAffiliateID = "11lIzz"
 # Récupérer le lien depuis le navigateur avec AppleScript #
 ###########################################################
 SafariLinkCmd = """tell application "Safari" to get URL of document 1"""
+SafaridevLinkCmd = """tell application "Safari Technology Preview" to get URL of document 1"""
 ChromeLinkCmd = """tell application "Google Chrome" to get URL of active tab of window 1"""
 FirefoxLinkCmd = """tell application "Firefox" to activate
 tell application "System Events" to keystroke "l" using command down
@@ -39,6 +40,7 @@ tell application "System Events" to keystroke "c" using command down
 delay 0.25
 return the clipboard"""
 SafariLinkTitleCmd = """tell application "Safari" to get name of document 1"""
+SafaridevLinkTitleCmd = """tell application "Safari Technology Preview" to get name of document 1"""
 ChromeLinkTitleCmd = """tell application "Google Chrome" to get URL of active tab of window 1"""
 
 def osacript(script):
@@ -52,6 +54,9 @@ if MyBrowser == "chrome":
 elif MyBrowser == "firefox":
 	Link = osacript(FirefoxLinkCmd)
 	LinkTitle = ""
+elif MyBrowser == "safaridev":
+	Link = osacript(SafaridevLinkCmd)
+	LinkTitle = osacript(SafaridevLinkTitleCmd)
 else:
 	Link = osacript(SafariLinkCmd)
 	LinkTitle = osacript(SafariLinkTitleCmd)
